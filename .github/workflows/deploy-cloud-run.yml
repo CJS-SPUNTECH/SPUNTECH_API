@@ -27,4 +27,4 @@ jobs:
         with:
           service: spuntech-api
           region: us-east1
-          source: ./backend
+          source: ./BACKEND
