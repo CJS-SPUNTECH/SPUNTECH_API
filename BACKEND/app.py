@@ -12,7 +12,7 @@ load_dotenv()
 
 app = Flask(__name__)
 CORS(app, origins=[
-    "https://ticket-taker.pages.dev"
+    "https://spuntech-api.pages.dev"
 ])
 
 API_URL = "https://api.ylm.co.il/api/Events"

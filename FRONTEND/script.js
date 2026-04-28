@@ -2512,7 +2512,6 @@ submitBtn.onclick = async () => {
 
 };
 
-//http://127.0.0.1:8000/?x=LINE-4,BLENDING,TABLE-6
 function preloadFromUrl() {
     const params = new URLSearchParams(window.location.search);
     const pathParam = params.get("x");
@@ -2565,8 +2564,7 @@ async function sendTicketToBackend() {
     formData.append("attachments", file, file.name);
     });
 
-    //local point python port
-    const response = await fetch("https://spuntech-api-1092236582947.us-east1.run.app/create-ticket", {
+    const response = await fetch("https://spuntech-api-p2yrla2fsq-ue.a.run.app/create-ticket", {
     method: "POST",
     body: formData
     });
