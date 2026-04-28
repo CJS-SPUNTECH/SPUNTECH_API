@@ -1001,6 +1001,8 @@ const flow = {
     //tt2
     //al1
     //al2
+    //l4perf
+    //l4dry
 
     //REUSABLE DIRECTION PAGES
     table: {
@@ -1325,6 +1327,10 @@ const flow = {
         ]},{
         layout: "stack",
         options: [
+            { label: "BEARING", value: "BEARING", next: "details" }
+        ]},{
+        layout: "stack",
+        options: [
             { label: "DRIVE", value: "DRIVE", next: "drive" }
         ]}
     ]},
@@ -1339,6 +1345,10 @@ const flow = {
         layout: "stack",
         options: [
             { label: "MOTOR", value: "MOTOR", next: "motor" }
+        ]},{
+        layout: "stack",
+        options: [
+            { label: "BEARING", value: "BEARING", next: "details" }
         ]},{
         layout: "stack",
         options: [
@@ -1359,6 +1369,10 @@ const flow = {
         ]},{
         layout: "stack",
         options: [
+            { label: "BEARING", value: "BEARING", next: "details" }
+        ]},{
+        layout: "stack",
+        options: [
             { label: "DRIVE", value: "DRIVE", next: "drive" }
         ]}
     ]},
@@ -1376,6 +1390,10 @@ const flow = {
         ]},{
         layout: "stack",
         options: [
+            { label: "BEARING", value: "BEARING", next: "details" }
+        ]},{
+        layout: "stack",
+        options: [
             { label: "DRIVE", value: "DRIVE", next: "drive" }
         ]}
     ]},
@@ -1386,6 +1404,10 @@ const flow = {
         layout: "stack",
         options: [
             { label: "COUPLING", value: "COUPLING", next: "details" }
+        ]},{
+        layout: "stack",
+        options: [
+            { label: "BEARING", value: "BEARING", next: "details" }
         ]},{
         layout: "stack",
         options: [
