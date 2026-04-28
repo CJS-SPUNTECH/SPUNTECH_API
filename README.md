@@ -1,7 +1,7 @@
 # SPUNTECH API
 
-**Dev:** Cole J. Stewart  
-**Est.:** April 23, 2026  
+**DEV:** Cole J. Stewart  
+**EST:** April 23, 2026  
 
 ---
 
