@@ -1,4 +1,5 @@
 const flow = {
+    
     //MAIN PAGE
     start: {
     title: "SYSTEM",
@@ -1472,8 +1473,6 @@ function render(nodeKey) {
 
     title.textContent = node.title;
     
-
-
     if (nodeKey === "details") {
     submitBtn.innerHTML = `<i data-lucide="send"></i>`;
     submitBtn.style.background = "rgb(0, 255, 0)";
@@ -1486,12 +1485,6 @@ function render(nodeKey) {
     }
 
     options.innerHTML = "";
-
-
-
-
-
-
 
     if (nodeKey === "start" || nodeKey === "final") {
     stepLabel.style.opacity = "0";
@@ -1511,11 +1504,6 @@ function render(nodeKey) {
     }
 
     lucide.createIcons();
-
-
-
-
-
 
     if (nodeKey === "details") {
     const formWrap = document.createElement("div");
@@ -1611,15 +1599,6 @@ function render(nodeKey) {
 
     renderFiles();      
 
-
-
-
-
-
-
-
-
-
     } else if (nodeKey === "final") {
 
     const statusText =
@@ -1658,12 +1637,6 @@ function render(nodeKey) {
     `;
 
     options.appendChild(summary);
-
-
-
-
-
-
 
     } else if (node.groups) {
     node.groups.forEach((group, groupIndex) => {
@@ -1712,12 +1685,6 @@ function render(nodeKey) {
     options.appendChild(groupWrap);
     });
 
-
-
-
-
-
-
     } else {
     node.options.forEach(opt => {
         const btn = document.createElement("button");
@@ -1734,16 +1701,8 @@ function render(nodeKey) {
         };
 
         options.appendChild(btn);
-    });
-    }
-    
-    
+    });}
 }
-
-
-
-
-
 
 //NAVIGATION BACKWARD
 backBtn.onclick = () => {
@@ -1754,10 +1713,10 @@ backBtn.onclick = () => {
     render(previous.node);
 };
 
-// NAVIGATION FORWARD
+//NAVIGATION FORWARD
 submitBtn.onclick = async () => {
 
-    // FROM NORMAL PAGE >> GO TO DETAILS
+    //FROM NORMAL PAGE >> GO TO DETAILS
     if (currentNode !== "details" && currentNode !== "final") {
     historyStack.push({
         node: currentNode,
@@ -1767,7 +1726,7 @@ submitBtn.onclick = async () => {
     return;
     }
 
-    // FROM DETAILS >> BACKEND >> GO TO FINAL
+    //FROM DETAILS >> BACKEND >> GO TO FINAL
     if (currentNode === "details") {
     const notesBox = document.getElementById("notesBox");
     detailsNotes = notesBox ? notesBox.value : "";
@@ -1777,9 +1736,7 @@ submitBtn.onclick = async () => {
         path: [...selectedPath]
     });
 
-    // go to receipt immediately
     render("final");
-
     submissionStatus = "PROCESSING";
 
     sendTicketToBackend()
@@ -1803,7 +1760,7 @@ submitBtn.onclick = async () => {
     return;
     }
 
-    // FROM FINAL >> GO TO START
+    //FROM FINAL >> GO TO START
     if (currentNode === "final") {
     selectedPath = [];
     detailsNotes = "";
@@ -1852,13 +1809,13 @@ function preloadFromUrl() {
 
         selectedPath.push(found.value || found.label);
         node = found.next;
-    }
-    });
+    }});
 
     render(node);
 }
 
 async function sendTicketToBackend() {
+
     const formData = new FormData();
 
     formData.append("selectedPath", JSON.stringify(selectedPath));
@@ -1881,9 +1838,11 @@ async function sendTicketToBackend() {
     }
 
     return result;
+
 }
 
 preloadFromUrl();
+
 if (currentNode === "start") {
     render("start");
 }

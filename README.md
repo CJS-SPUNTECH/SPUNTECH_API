@@ -1,9 +1,13 @@
-# SPUNTECH-API
-CJS 23 APRIL 2026
+# SPUNTECH API
 
-# FRONTEND
-CLOUDFLARE PAGES
-https://spuntech-api.pages.dev/
+**Dev:** Cole J. Stewart  
+**Est.:** April 23, 2026  
 
-# BACKEND
-GOOGLE CLOUD RUN
+---
+
+## 🌐 Frontend
+- **PLAT:** Cloudflare Pages  
+- **LINK:** https://spuntech-api.pages.dev/
+
+## ⚙️ Backend
+- **PLAT:** Google Cloud Run
