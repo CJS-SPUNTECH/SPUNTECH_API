@@ -1498,6 +1498,9 @@ function juanmode() {
     title.textContent = "JUAN MODE";
     stepLabel.textContent = "SUPER DUPER SECRET BUTTONS";
 
+    backBtn.style.display = "none";
+    submitBtn.style.display = "none";
+
     options.innerHTML = "";
 
     const wrap = document.createElement("div");
